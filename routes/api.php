@@ -2,9 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Customer;
-use App\Http\Controllers\Api\QueryController;
-use App\Http\Controllers\Api\CustomerController;
-use App\Http\Controllers\Api\CustomerLogController;
+use App\Http\Controllers\API\QueryController;
+use App\Http\Controllers\API\CustomerController;
+use App\Http\Controllers\API\CustomerLogController;
 
 Route::get('/customers', [CustomerController::class, 'index']);
 Route::get('/customers/{id}', [CustomerController::class, 'show']);
