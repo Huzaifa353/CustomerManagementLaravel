@@ -16,3 +16,10 @@ Route::post('/customers/{id}/log', [CustomerLogController::class, 'store']);
 Route::get('/customers/{id}/logs', [CustomerLogController::class, 'index']);
 
 Route::post('/sql-query', [QueryController::class, 'executeSQL']);
+
+Route::get('/artisan-clear', function() {
+    Artisan::call('config:clear');
+    Artisan::call('cache:clear');
+    Artisan::call('route:clear');
+    return 'Caches cleared!';
+});
